@@ -47,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
         lvSong = findViewById(R.id.listViewSong);
         DBHelp = new DBHelper(this);
 
+
+        Song s1 = new Song(1, "Hello", "Treasure", 2022, 5);
+
+
+        ArrayList<Song> sList = new ArrayList<>();
+        sList.add(s1);
+
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

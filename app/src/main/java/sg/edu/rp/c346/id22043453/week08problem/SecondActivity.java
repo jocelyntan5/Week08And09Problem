@@ -27,13 +27,11 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         dbHelper = new DBHelper(this);
         lv = findViewById(R.id.lv);
-
-
         spinner = findViewById(R.id.spinner);
         button = findViewById(R.id.button);
 
         ArrayList<Song> songList = dbHelper.getSong();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, songList);
+        adapter = new CustomAdapter(this, android.R.layout.simple_list_item_1, songList);
         lv.setAdapter(adapter);
 
 
